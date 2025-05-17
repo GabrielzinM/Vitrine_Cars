@@ -36,6 +36,103 @@ header {
     }
 }
 
+/* Estilos para o menu de navegação */
+header nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    position: relative;
+    text-align: center;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Efeito hover nos itens do menu */
+header nav ul li a:hover {
+    color: #beff1b;
+    transform: translateY(-3px);
+}
+
+/* Efeito de sublinhado animado */
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #beff1b;
+    transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    width: 70%;
+}
+
+/* Item ativo do menu */
+header nav ul li a.active {
+    color: #beff1b;
+}
+
+header nav ul li a.active::after {
+    width: 70%;
+}
+
+/* Efeito de fundo ao clicar */
+header nav ul li a:active {
+    transform: translateY(1px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header nav ul {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    header nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li a {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+    
+    header nav ul li a::after {
+        bottom: 2px;
+    }
+}
+
 section {
     background-image: radial-gradient(#7f3d9e, #340044);
     height: 100vh;
@@ -258,4 +355,71 @@ section {
         }
     }
 
+}
+
+/* Adiciona animação suave para os dots */
+.indicators ul li {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.indicators ul li:hover {
+    transform: scaleY(1.5);
+}
+
+/* Melhora a acessibilidade dos botões */
+.arrows button {
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.arrows button:hover {
+    transform: scale(1.1);
+    background-color: #beff1b;
+}
+
+.arrows button:focus {
+    outline: 2px solid #beff1b;
+    outline-offset: 2px;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+
+    header nav ul {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .list .item .content {
+        right: 20px;
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .list .item .content .description {
+        text-align: center;
+    }
+
+    .arrows {
+        width: 90vw;
+    }
+}
+
+/* Efeito de hover nos botões de informação */
+.information {
+    transition: all 0.3s ease;
+}
+
+.information:hover {
+    background-color: #340044 !important;
+    color: #beff1b !important;
+    border-color: #beff1b !important;
+    transform: translateY(-3px);
 }
