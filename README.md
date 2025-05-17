@@ -2,7 +2,9 @@
 
 ![Preview do Carrossel](./images/1.png) <!-- Adicione um link para imagem de preview -->
 
-Um carrossel interativo e responsivo que exibe carros esportivos de luxo com animações fluidas e design moderno.
+Um carrossel interativo e responsivo que exibe carros esportivos de luxo com animações fluidas e design moderno. 
+
+[Video aula de inspiração](https://youtu.be/AZ1drCVTDgs)
 
 ## ✨ Demonstração
 
